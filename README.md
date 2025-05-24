@@ -18,7 +18,7 @@ PhotoDuplicates is a simple Windows tool to help you find and move duplicate ima
   ```
   python removeduplicates.py
   ```
-- If you have the executable (`removeduplicates.exe`), just double-click it.
+- If you have the executable (`removeduplicates.exe`), just double-click it. (This can be found in the dist folder)
 
 ### 2. Select Folders
 
