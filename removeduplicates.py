@@ -32,7 +32,10 @@ def find_and_move_duplicates(src_folder, dest_folder):
                 h = file_hash(filepath)
                 if h in hashes:
                     print(f"Duplicate found: {filepath}")
-                    shutil.move(filepath, os.path.join(dest_folder, name)) # Move duplicate file
+                    try:
+                        shutil.move(filepath, os.path.join(dest_folder, name)) # Move duplicate file
+                    except Exception as e:
+                        print(f"Could not move file: {filepath}. Reason: {e}")
                 else:
                     hashes[h] = filepath # Store hash of unique file
 
